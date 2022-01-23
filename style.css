@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family:sans-serif;
+    background:linear-gradient(#E0EAFC, #CFDEF3);
+    height: 100vh;
+    user-select: none;
+}
+.container, .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.click-box{
+    display:block;
+    width:160px;
+    height:50px;
+    background: #27ae60;
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    border: none;
+    transform: 0.5s;
+}
+.click-box:hover{
+background: #219150;
+}
+
+#click{
+    display: none;
+}
+#click:checked ~ .content {
+    visibility: visible;
+    opacity: 1;
+}
+.content{
+    visibility: hidden;
+    opacity: 0;
+    width:400px;
+    height:250px;
+    background:white;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.4);
+    transition: 0.4s ease-in;
+}
+.header{
+    height:70px;
+    background: #27ae60;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2) ;
+}
+.header h2{
+    color:white;
+    padding-left: 70px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}
+.cross{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color:#e8f7fc;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.check{
+    font-size: 60px;
+    color:green;
+    font-weight: bold;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    /* border:2px solid green; */
+    border-radius: 50%;
+    /* padding-top: 20px; */
+    margin:30px 0 0 160px;
+}
+p{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+/* .underline{
+    position: absolute;
+    bottom:60px;
+    height: 1px;
+    width:100%;
+    background:grey;
+} */
+.close-btn{
+    position: absolute;
+    bottom:12px;
+    right:25px;
+    border:1px solid green;
+    border-radius: 3px;
+    padding:6px 8px;
+}
+.close-btn:hover{
+    color:white;
+    background: green;
+}
